@@ -10,6 +10,8 @@ const styles = {
 export default class Discover extends Component {
   state = {
     results: [],
+    match: false,
+    count: 0
   };
 
   componentDidMount() {
@@ -23,10 +25,14 @@ export default class Discover extends Component {
       <div>
         <div className="card" style={styles.imageStyle}>
           <img alt="dog" className="img-fluid" src={this.state.results} />
+          <button className="card-btn pass" dataValue="pass">badPuppy</button>
+          <button className="card-btn accept" dataValue="accept">goodPuppy</button>
+          <p>Count: {this.state.count}</p>
         </div>
       </div>
     );
   }
 }
 
-//
+// pass button onClick count +
+// 
